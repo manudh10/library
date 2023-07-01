@@ -1,0 +1,66 @@
+body{
+    background-color:aquamarine;
+    display: grid;
+    overflow: auto;
+    min-height: 100vh;
+    grid-template-rows: 10% 88%;
+    box-sizing: border-box;
+    
+    grid-template-areas:
+        "header"
+        "main";
+    margin: 0px;
+    padding: 5px 5px 0px 5px;
+    
+}
+#header{
+    grid-area: header;
+    width: auto;
+    background-color: rgb(107, 236, 193);  
+    margin-bottom: 3px;
+}
+#main{
+    grid-area: main;
+    background-color: azure;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    gap: 3px;
+    
+}
+#footer{
+    position: fixed;
+    margin: 0px;
+    padding: 5px 5px 0px 5px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/
+    height: 20px;
+    
+    display: grid;
+    
+    justify-content: center;
+    align-items: center;
+}
+#ftr-content{
+    width: 250px;
+    background: grey;
+    text-align: center;
+}
+#left-nav{
+    border: 1px solid aquamarine;
+    border-radius: 5px;
+}
+#main-content{
+    border: 1px solid aquamarine;
+    border-radius: calc(0.5 * 3px);
+}
+#btnAddBook{
+    display: block;
+    margin-top: 3rem;
+    width: 90px;
+    min-width: fit-content;
+    max-width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
