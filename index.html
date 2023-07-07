@@ -14,9 +14,49 @@
     </div>
     <div id="main">
         <div id="left-nav">
-            <button id="btnAddBook">Add Book</button>
+            <div class="btn">
+                <button class="btnAdd" id="openModalBtn">Add Book</button>
+
+                <!-- The modal form -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form id="myForm">
+                            <!-- Input fields for the new record -->
+                            <input type="text" id="titleInput" placeholder="Title" required>
+                            <input type="text" id="authorInput" placeholder="Author" required>
+                            <input type="number" id="pageInput" placeholder="Number of Pages" required>
+                            <label for="readInput">Have you read it? </label>
+                            <select name="read-unread" id="readInput">
+                                <option value="Yes" selected>Yes</option>
+                                <option value="No">No</option>
+                            </select>                                    
+
+                            <button type="submit">Add Record</button>
+                        </form>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="stats">
+                <table>
+                    <th>STATS</th>
+                    <tr>
+                        <td>Total Books:</td>
+                        <td id="numberBook"></td>
+                    </tr>
+                    <tr>
+                        <td>Read:</td>
+                        <td id="numberRead"></td>
+                    </tr>
+                    <tr>
+                        <td>Unread:</td>
+                        <td id="numberUnread"></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div id="main-content">Books Details</div>
+        <div id="main-content"></div>
     </div>
     <div id="footer"><div id="ftr-content">Copyright © Manoj Dhoundiyal</div></div>
 </body>

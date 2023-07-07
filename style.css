@@ -57,6 +57,10 @@ body{
 #left-nav{
     border: 1px solid aquamarine;
     border-radius: 5px;
+    display: grid;
+    grid-template-rows: 6em auto;
+    grid-template-columns: auto;
+    gap:3px;
 }
 #main-content{
     border: 1px solid aquamarine;
@@ -67,7 +71,7 @@ body{
     gap: 5px;
     padding: 10px;
 }
-#btnAddBook{
+.btnAdd{
     display: block;
     margin-top: 3rem;
     width: 90px;
@@ -102,67 +106,77 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
 }
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 17px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
+ 
   .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    width: 50px;
   }
   
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
   .btnDel{
     display: block;
     margin-left: auto;
   }
+  .no-label {
+    color: red;
+  }
+  
+  .yes-label {
+    color: green;
+  }
+  .stats{
+    justify-content: center;
+    align-items: center;
+  }
+  table{
+    min-width: fit-content;
+    max-width: 300px;
+    width: 225px;
+  }
+  table, tr, td{
+    border: 1px solid brown;
+  }
+  th{
+    text-align: center;
+    font-weight: bold;
+  }
+
+
+
+
+  /* CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Additional styling for the form */
+#myForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#myForm input, #myForm button {
+  margin-bottom: 10px;
+}
